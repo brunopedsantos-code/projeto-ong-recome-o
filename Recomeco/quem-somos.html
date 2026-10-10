@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="claro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem somos — Recomeço</title>
+  <meta name="description" content="Conheça o propósito e as frentes de atuação do Recomeço: acolhimento, segurança alimentar e oportunidades de trabalho.">
+  <script>
+    (function () {
+      var salvo = localStorage.getItem('recomeco-tema');
+      var tema = salvo || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro');
+      document.documentElement.setAttribute('data-theme', tema);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" aria-label="Recomeço — página inicial">
+        <span class="logo-mark" aria-hidden="true"></span>Recomeço
+      </a>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar para modo escuro" aria-pressed="false" type="button">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 119.5 4a6.8 6.8 0 1010.5 10.5z"/></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu" type="button"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="site-nav" id="navMenu" aria-label="Navegação principal">
+        <a href="index.html" target="_blank">Início</a>
+        <a href="#proposito">Nosso propósito</a>
+        <a href="#atuacao">Como atuamos</a>
+        <a href="#compromisso">Nosso compromisso</a>
+        <a href="projetos.html" target="_blank">Projetos</a>
+        <a href="cadastro.html" target="_blank">Cadastro</a>
+        <a class="btn btn-primary btn-nav" href="index.html#como-doar" target="_blank">Quero doar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="sobre-hero">
+      <div class="wrap sobre-hero-inner">
+        <div>
+          <span class="tag-sticker">sobre o Recomeço</span>
+          <h1>Ninguém deveria enfrentar tudo sozinho.</h1>
+          <p class="hero-lead">O Recomeço aproxima quem quer ajudar de quem precisa de apoio para atravessar um momento difícil e recuperar possibilidades para o futuro.</p>
+          <div class="hero-actions">
+            <a href="index.html#como-ajudamos" class="btn btn-primary btn-lg">Conheça nosso trabalho</a>
+            <a href="index.html#preciso-de-ajuda" class="btn btn-ghost btn-lg">Preciso de ajuda</a>
+          </div>
+        </div>
+        <aside class="sobre-cartaz" aria-label="Nosso princípio">
+          <span>O ponto de partida é a dignidade.</span>
+          <strong>Acolher hoje. Abrir caminhos para amanhã.</strong>
+        </aside>
+      </div>
+    </section>
+
+    <section class="missao" id="proposito">
+      <div class="wrap missao-grid">
+        <h2>Vulnerabilidade social não define destino.</h2>
+        <div class="missao-text">
+          <p>Acreditamos que dignidade não é um privilégio, é um ponto de partida. Por isso, nosso trabalho reúne acolhimento imediato e apoio para reconstruir caminhos a longo prazo.</p>
+          <p>O frio, a fome e a falta de trabalho exigem respostas concretas. Agasalhos, alimentos e oportunidades não resolvem tudo de uma vez, mas podem ser o começo de uma mudança importante.</p>
+          <p>Por trás de cada pedido existe uma pessoa com nome, história e planos. Nosso papel é oferecer apoio sem reduzir ninguém à dificuldade que está vivendo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre-valores" id="atuacao">
+      <div class="wrap">
+        <h2>O que orienta nosso trabalho</h2>
+        <p class="section-lead">Acolher no presente e ajudar a construir condições para o próximo passo.</p>
+        <div class="sobre-valores-grid">
+          <article class="sobre-valor">
+            <h3>Dignidade</h3>
+            <p>O atendimento começa pelo respeito. Cada pessoa tem sua própria história e merece ser tratada com cuidado.</p>
+          </article>
+          <article class="sobre-valor">
+            <h3>Ação prática</h3>
+            <p>Transformamos contribuições em apoio concreto: roupas de inverno, alimentos e ajuda ligada a necessidades específicas.</p>
+          </article>
+          <article class="sobre-valor">
+            <h3>Novas oportunidades</h3>
+            <p>Além da urgência, apoiamos a capacitação e a volta ao mercado de trabalho para abrir caminhos de autonomia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pilares">
+      <div class="wrap">
+        <h2>Como essa ideia vira ação</h2>
+        <p class="section-lead">Nosso trabalho se organiza em frentes que se complementam.</p>
+        <ul class="pilares-list">
+          <li class="pilar">
+            <div class="pilar-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 4c-3 6-9 10-9 18a9 9 0 0018 0c0-8-6-12-9-18z"/></svg></div>
+            <div class="pilar-text"><h3>Combate ao frio</h3><p>Arrecadamos agasalhos, cobertores e roupas de inverno para pessoas em situação de rua ou em moradias sem aquecimento.</p></div>
+          </li>
+          <li class="pilar">
+            <div class="pilar-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="22" rx="2"/><path d="M8 18l16-10 16 10"/></svg></div>
+            <div class="pilar-text"><h3>Segurança alimentar</h3><p>Organizamos cestas básicas com itens essenciais para famílias em situação de insegurança alimentar.</p></div>
+          </li>
+          <li class="pilar">
+            <div class="pilar-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6l6 12 13 2-9.5 9 2 13L24 36l-11.5 6 2-13L5 20l13-2z"/></svg></div>
+            <div class="pilar-text"><h3>Apoio conforme a necessidade</h3><p>Conectamos pedidos específicos, como materiais escolares e equipamentos de trabalho, a pessoas dispostas a contribuir.</p></div>
+          </li>
+          <li class="pilar">
+            <div class="pilar-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="7"/><path d="M10 40c0-9 6-15 14-15s14 6 14 15"/></svg></div>
+            <div class="pilar-text"><h3>Empregabilidade</h3><p>Oferecemos apoio com capacitação, currículo, preparação para entrevistas e aproximação com oportunidades de trabalho.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sobre-compromisso" id="compromisso">
+      <div class="wrap sobre-compromisso-grid">
+        <h2>Ajuda de verdade precisa chegar a alguém.</h2>
+        <div>
+          <p>O Recomeço existe para aproximar solidariedade e necessidade real. Uma doação pode ajudar a enfrentar o frio, colocar comida na mesa ou dar suporte para alguém voltar a procurar trabalho com mais confiança.</p>
+          <p>Queremos que o apoio seja um caminho, não um rótulo. O objetivo é contribuir para que cada pessoa tenha condições de seguir adiante com mais segurança e autonomia.</p>
+          <a class="btn btn-primary" href="index.html#como-doar">Veja como contribuir</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final">
+      <div class="wrap cta-final-inner">
+        <h2>Um recomeço pode começar com você.</h2>
+        <p>Uma mão estendida faz diferença quando chega na hora certa.</p>
+        <a class="btn btn-primary btn-lg" href="index.html#como-doar">Quero ajudar agora</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="wrap footer-grid">
+      <div class="footer-col footer-brand">
+        <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"></span>Recomeço</a>
+        <p>Instituto Recomeço — organização sem fins lucrativos dedicada a restituir dignidade e oportunidade a pessoas em vulnerabilidade social.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <p>Rua da Esperança, 245 — Centro<br>São Paulo — SP</p>
+        <p><a href="mailto:contato@recomeco.org.br">contato@recomeco.org.br</a></p>
+        <p><a href="tel:+551140028922">(11) 4002-8922</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <p><a href="index.html">Página inicial</a></p>
+        <p><a href="quem-somos.html">Quem somos</a></p>
+        <p><a href="index.html#como-ajudamos" target="_blank">Como atuamos</a></p>
+        <p>CNPJ: 00.000.000/0001-00</p>
+      </div>
+      <div class="footer-col">
+        <h4>Receba novidades</h4>
+        <p>Um e-mail por mês com histórias reais e o impacto das doações.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <label class="visually-hidden" for="newsletter-email">Seu e-mail</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="seu@email.com" required>
+          <button type="submit" class="btn btn-primary">Assinar</button>
+        </form>
+      </div>
+    </div>
+    <div class="wrap footer-bottom"><p>© <span id="anoAtual"></span> Instituto Recomeço. Todos os direitos reservados.</p></div>
+  </footer>
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" type="button">↑</button>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="claro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadastre seu interesse em participar das ações do Instituto Recomeço.">
+  <title>Cadastro | Recomeço</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero { padding: clamp(3rem, 7vw, 6rem) 0 3rem; background: var(--surface-alt); }
+    .page-hero-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap:2rem; align-items:center; }
+    .page-hero h1 { max-width: 760px; margin:.5rem 0 1rem; }
+    .page-hero p { max-width: 650px; font-size:1.1rem; line-height:1.7; }
+    .eyebrow { display:inline-block; font-family:var(--font-tag); font-size:1.6rem; color:var(--rust); transform:rotate(-2deg); }
+    .page-photo { width:100%; height:350px; object-fit:cover; border:8px solid var(--surface); box-shadow:10px 10px 0 var(--gold); }
+    .content-section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
+    .section-intro { max-width:720px; margin-bottom:2rem; }
+    .project-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; }
+    .project-card { background:var(--surface); border:1px solid var(--border); padding:1rem; box-shadow:5px 5px 0 var(--surface-alt); }
+    .project-card img { width:100%; height:210px; object-fit:cover; display:block; margin-bottom:1rem; }
+    .project-card h3 { margin:.5rem 0; }
+    .project-card p { line-height:1.65; }
+    .project-label { display:inline-block; padding:.25rem .6rem; background:var(--gold); color:#201a11; font-size:.8rem; font-weight:700; }
+    .note-box { border-left:5px solid var(--orange); background:var(--surface); padding:1rem 1.25rem; margin-top:2rem; }
+    .form-layout { display:grid; grid-template-columns:.75fr 1.25fr; gap:2rem; align-items:start; }
+    .form-aside { background:var(--ink); color:var(--surface); padding:1.5rem; }
+    .form-aside h2 { color:var(--gold); }
+    .signup-form { background:var(--surface); border:1px solid var(--border); padding:clamp(1rem,3vw,2rem); }
+    .form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+    .field { display:flex; flex-direction:column; gap:.4rem; margin-bottom:1rem; }
+    .field.full { grid-column:1/-1; }
+    .field label { font-weight:700; font-size:.95rem; }
+    .field input,.field select,.field textarea { width:100%; padding:.8rem; border:1px solid #8c806a; border-radius:2px; background:#fffdf7; color:#201a11; font:inherit; }
+    .field input:focus,.field select:focus,.field textarea:focus { outline:3px solid var(--gold); outline-offset:2px; }
+    .form-help { font-size:.88rem; line-height:1.5; }
+    .success-message { display:none; padding:1rem; background:#e1efd8; color:#24421b; border-left:4px solid #477a35; margin-top:1rem; }
+    .btn:focus-visible,a:focus-visible,button:focus-visible { outline:3px solid var(--orange); outline-offset:3px; }
+    .skip-link { position:absolute; left:-9999px; top:auto; }
+    .skip-link:focus { left:1rem; top:1rem; z-index:9999; background:#fff; padding:1rem; }
+    @media(max-width:850px) { .page-hero-grid,.form-layout { grid-template-columns:1fr; } .project-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:560px) { .project-grid,.form-grid { grid-template-columns:1fr; } .field.full { grid-column:auto; } .page-photo { height:260px; } }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" target="_blank" aria-label="Abrir a página inicial em nova aba">
+        <span class="logo-mark" aria-hidden="true"></span>Recomeço
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu" type="button">☰</button>
+      <nav class="site-nav" id="navMenu" aria-label="Navegação principal">
+        <a href="index.html" target="_blank">Início</a>
+        <a href="quem-somos.html" target="_blank">Quem somos</a>
+        <a href="projetos.html" aria-current="page">Projetos</a>
+        <a href="cadastro.html" target="_blank">Cadastro</a>
+        <a class="btn btn-primary btn-nav" href="index.html#como-doar" target="_blank">Quero ajudar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="wrap page-hero-grid">
+        <div>
+          <span class="eyebrow">vamos conversar?</span>
+          <h1>Tem vontade de ajudar ou precisa de apoio?</h1>
+          <p>Conta um pouco pra gente. Este formulário é uma primeira manifestação de interesse para o projeto acadêmico Recomeço — não substitui um atendimento oficial nem envia seus dados para um servidor.</p>
+        </div>
+        <img class="page-photo" src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1000&q=85" alt="Pessoas conversando durante uma atividade comunitária">
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="wrap form-layout">
+        <aside class="form-aside">
+          <span class="eyebrow" style="color:var(--gold)">antes de preencher</span>
+          <h2>Um cadastro com respeito.</h2>
+          <p>Pedimos apenas informações básicas para demonstrar como um formulário de uma ONG pode ser organizado.</p>
+          <ul>
+            <li>Preencha só o que for necessário.</li>
+            <li>Não informe senhas, dados bancários ou documentos sensíveis.</li>
+            <li>Escolha a opção que melhor representa seu interesse.</li>
+          </ul>
+          <p class="form-help">Projeto acadêmico: os dados ficam somente no navegador durante a demonstração e não são enviados a uma instituição real.</p>
+        </aside>
+        <form class="signup-form" id="cadastroForm">
+          <h2>Cadastro de interesse</h2>
+          <p class="form-help">Campos com * são obrigatórios.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="nome">Nome completo *</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" minlength="3" maxlength="100" placeholder="Como podemos te chamar?" required>
+            </div>
+            <div class="field">
+              <label for="email">E-mail *</label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="120" placeholder="voce@exemplo.com" required>
+            </div>
+            <div class="field">
+              <label for="telefone">Telefone (opcional)</label>
+              <input id="telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" maxlength="16" placeholder="(11) 99999-9999">
+            </div>
+            <div class="field">
+              <label for="interesse">Como quer participar? *</label>
+              <select id="interesse" name="interesse" required>
+                <option value="">Selecione uma opção</option>
+                <option value="voluntariado">Quero ser voluntário(a)</option>
+                <option value="doacao">Quero doar itens ou alimentos</option>
+                <option value="apoio">Estou procurando apoio</option>
+                <option value="parceria">Quero propor uma parceria</option>
+                <option value="informacoes">Quero receber informações</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="bairro">Bairro ou região (opcional)</label>
+              <input id="bairro" name="bairro" type="text" autocomplete="address-level3" maxlength="100" placeholder="Ex.: Centro, Osasco">
+            </div>
+            <div class="field full">
+              <label for="mensagem">Conte um pouco mais (opcional)</label>
+              <textarea id="mensagem" name="mensagem" rows="4" maxlength="600" placeholder="Se quiser, explique como gostaria de participar ou que tipo de apoio procura."></textarea>
+            </div>
+            <div class="field full">
+              <label style="font-weight:400;display:flex;gap:.65rem;align-items:flex-start">
+                <input type="checkbox" id="consentimento" required style="width:auto;margin-top:.3rem">
+                <span>Entendi que este é um formulário demonstrativo e autorizo o uso das informações apenas para visualizar a confirmação nesta página. *</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Enviar manifestação de interesse</button>
+          <div class="success-message" id="mensagemSucesso" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="wrap footer-grid">
+      <div class="footer-col footer-brand">
+        <a class="logo" href="index.html" target="_blank"><span class="logo-mark" aria-hidden="true"></span>Recomeço</a>
+        <p>Uma rede de apoio que acredita que ninguém precisa atravessar uma fase difícil sozinho.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Fale com a gente</h4>
+        <p>São Paulo — SP</p>
+        <p><a href="mailto:contato@recomeco.org.br">contato@recomeco.org.br</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <p><a href="index.html" target="_blank">Página inicial</a></p>
+        <p><a href="quem-somos.html" target="_blank">Quem somos</a></p>
+        <p><a href="projetos.html">Projetos</a></p>
+        <p><a href="cadastro.html" target="_blank">Cadastro</a></p>
+      </div>
+    </div>
+    <div class="wrap footer-bottom"><p>© <span id="anoAtual"></span> Instituto Recomeço. Projeto acadêmico.</p></div>
+  </footer>
+  <script src="script.js"></script>
+
+  <script>
+    // Demonstração de validação no navegador: não envia dados para nenhum servidor.
+    const formCadastro = document.getElementById('cadastroForm');
+    const campoTelefone = document.getElementById('telefone');
+    const mensagemSucesso = document.getElementById('mensagemSucesso');
+
+    campoTelefone.addEventListener('input', function () {
+      let numeros = this.value.replace(/\\D/g, '').slice(0, 11);
+      if (numeros.length > 10) {
+        this.value = numeros.replace(/^(\\d{2})(\\d{5})(\\d{4})$/, '($1) $2-$3');
+      } else if (numeros.length > 6) {
+        this.value = numeros.replace(/^(\\d{2})(\\d{4})(\\d{0,4})$/, '($1) $2-$3');
+      } else if (numeros.length > 2) {
+        this.value = numeros.replace(/^(\\d{2})(\\d{0,5})$/, '($1) $2');
+      } else {
+        this.value = numeros;
+      }
+    });
+
+    formCadastro.addEventListener('submit', function (evento) {
+      evento.preventDefault();
+      if (!formCadastro.checkValidity()) {
+        formCadastro.reportValidity();
+        return;
+      }
+      const nome = document.getElementById('nome').value.trim().split(' ')[0];
+      mensagemSucesso.textContent = 'Obrigado, ' + nome + '! Sua manifestação foi validada nesta demonstração. Nenhum dado foi enviado ou armazenado.';
+      mensagemSucesso.style.display = 'block';
+      mensagemSucesso.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      formCadastro.reset();
+    });
+  </script>
+</body>
+</html>

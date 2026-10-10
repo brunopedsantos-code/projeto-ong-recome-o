@@ -1,0 +1,20 @@
+PROJETO RECOMEÇO — PÁGINAS ADICIONAIS
+
+Arquivos:
+- index.html: página inicial existente, preservada e com links para as páginas novas.
+- quem-somos.html: página institucional existente.
+- projetos.html: página nova com as frentes de atuação.
+- cadastro.html: página nova com formulário validado no navegador.
+- style.css: identidade visual compartilhada.
+- script.js: interações que já existiam no projeto.
+
+COMO ABRIR:
+1. Extraia todo o ZIP para uma única pasta.
+2. Abra a pasta no VS Code.
+3. Abra index.html no navegador (ou use Live Server).
+4. Clique em Projetos ou Cadastro. Os links foram configurados para abrir em outra aba, sem substituir a página inicial.
+
+IMPORTANTE:
+- As fotos são carregadas da internet (Unsplash), então precisam de conexão.
+- O formulário é apenas demonstrativo: valida no navegador e não envia nem salva os dados.
+- Endereço, e-mail e outros detalhes institucionais presentes no projeto são exemplos acadêmicos; confirme/substitua antes de publicar como organização real.

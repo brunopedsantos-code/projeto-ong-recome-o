@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomeço — Acolhimento, dignidade e novas oportunidades</title>
+  <meta name="description" content="O Recomeço combate o frio, garante segurança alimentar e reconstrói caminhos de emprego para pessoas em vulnerabilidade social.">
+
+  <!-- Evita "flash" do tema errado ao carregar a página -->
+  <script>
+    (function () {
+      var salvo = localStorage.getItem('recomeco-tema');
+      var tema = salvo || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro');
+      document.documentElement.setAttribute('data-theme', tema);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="wrap header-inner">
+      <a class="logo" href="#topo">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Recomeço
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar para modo escuro" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5"/>
+            <path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 119.5 4a6.8 6.8 0 1010.5 10.5z"/>
+          </svg>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="site-nav" id="navMenu">
+        <a href="#missao">Missão</a>
+        <a href="#como-ajudamos">Como atuamos</a>
+        <a href="#como-doar">Formas de doar</a>
+        <a href="#historias">Histórias</a>
+        <a href="#contato">Contato</a>
+        <a href="projetos.html" target="_blank">Projetos</a>
+        <a href="cadastro.html" target="_blank">Cadastro</a>
+        <a class="btn btn-primary btn-nav" href="#como-doar">Quero doar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <span class="tag-sticker">bairro por bairro, mão por mão</span>
+          <h1>Um recomeço começa com uma mão estendida.</h1>
+          <p class="hero-lead">
+            Somos uma ponte entre quem pode ajudar e quem precisa recuperar o chão sob os pés.
+            Levamos agasalho para o frio, cesta básica para a mesa e caminhos reais de volta ao trabalho.
+          </p>
+          <div class="hero-actions">
+            <a href="#como-doar" class="btn btn-primary btn-lg">Fazer uma doação</a>
+            <a href="#preciso-de-ajuda" class="btn btn-ghost btn-lg">Preciso de ajuda</a>
+          </div>
+          <p class="hero-note">100% do que arrecadamos vira agasalho, alimento ou oportunidade. Sem intermediários.</p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 520 560" class="mural-svg">
+            <defs>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="var(--rust)"/>
+                <stop offset="100%" stop-color="var(--gold)"/>
+              </linearGradient>
+              <filter id="paperNoise">
+                <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
+                <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.05 0"/>
+              </filter>
+            </defs>
+
+            <!-- fundo tipo parede/cartaz -->
+            <rect x="0" y="0" width="520" height="560" fill="url(#skyGrad)"/>
+            <rect x="0" y="0" width="520" height="560" filter="url(#paperNoise)"/>
+
+            <!-- sol/tijolo de luz atrás das figuras -->
+            <circle cx="260" cy="230" r="120" fill="var(--gold)" opacity="0.5"/>
+
+            <!-- silhueta 1: passando uma caixa -->
+            <g fill="var(--ink-mural)">
+              <path d="M120 560 V400 q0 -30 25 -30 h40 q25 0 25 30 v40 h20 v-30 q0 -18 18 -18 h50 q18 0 18 18 v30
+                       l30 -10 v40 l-40 15 h-40 v90 z"/>
+              <circle cx="150" cy="330" r="26"/>
+            </g>
+
+            <!-- silhueta 2: recebendo -->
+            <g fill="var(--ink-mural)">
+              <path d="M330 560 V430 q0 -26 24 -26 h44 q24 0 24 26 v20 l40 -30 v45 l-45 35 h-30 v90 z"/>
+              <circle cx="360" cy="360" r="24"/>
+            </g>
+
+            <!-- caixa/agasalho passando de mão em mão -->
+            <rect x="255" y="378" width="46" height="36" rx="2" fill="var(--cream-mural)" opacity="0.92"/>
+            <line x1="255" y1="396" x2="301" y2="396" stroke="var(--rust)" stroke-width="3"/>
+
+            <!-- respingos de tinta -->
+            <circle cx="70" cy="120" r="6" fill="var(--gold)" opacity="0.8"/>
+            <circle cx="95" cy="150" r="3" fill="var(--gold)" opacity="0.6"/>
+            <circle cx="440" cy="480" r="7" fill="var(--ink-mural)" opacity="0.4"/>
+            <circle cx="455" cy="455" r="3" fill="var(--ink-mural)" opacity="0.4"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="torn-edge" aria-hidden="true"></div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="Nosso impacto em números">
+      <div class="wrap stats-grid">
+        <div class="stat">
+          <span class="stat-number" data-count="1240">0</span>
+          <span class="stat-label">pessoas e famílias atendidas em 2025</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="3800">0</span>
+          <span class="stat-label">agasalhos e cobertores distribuídos no inverno</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="620">0</span>
+          <span class="stat-label">cestas básicas entregues por mês</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="58">0</span>
+          <span class="stat-label">% das pessoas capacitadas recolocadas no mercado</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSÃO -->
+    <section class="missao" id="missao">
+      <div class="wrap missao-grid">
+        <h2>Vulnerabilidade social não define destino.</h2>
+        <div class="missao-text">
+          <p>
+            Acreditamos que dignidade não é um privilégio, é um ponto de partida. Por isso, trabalhamos
+            três frentes ao mesmo tempo: o acolhimento imediato de quem enfrenta frio e fome, e a reconstrução
+            de longo prazo de quem busca um lugar de novo no mercado de trabalho.
+          </p>
+          <p>
+            Cada agasalho, cada cesta básica e cada doação chegam até uma pessoa com nome, história e projeto
+            de vida. Nosso trabalho termina quando essa pessoa não precisa mais de nós.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO ATUAMOS -->
+    <section class="pilares" id="como-ajudamos">
+      <div class="wrap">
+        <h2>Como atuamos</h2>
+        <p class="section-lead">Quatro frentes que se conectam: acolher agora e abrir caminho para o futuro.</p>
+
+        <ul class="pilares-list">
+          <li class="pilar">
+            <div class="pilar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 4c-3 6-9 10-9 18a9 9 0 0018 0c0-8-6-12-9-18z"/></svg>
+            </div>
+            <div class="pilar-text">
+              <h3>Combate ao frio</h3>
+              <p>Campanhas de arrecadação de agasalhos, cobertores e roupas de inverno, distribuídas diretamente a quem vive em situação de rua ou em moradias sem aquecimento.</p>
+            </div>
+          </li>
+
+          <li class="pilar">
+            <div class="pilar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="22" rx="2"/><path d="M8 18l16-10 16 10"/></svg>
+            </div>
+            <div class="pilar-text">
+              <h3>Cesta básica</h3>
+              <p>Montagem e entrega mensal de cestas com itens essenciais para famílias em insegurança alimentar, priorizando quem está em fila de espera ativa.</p>
+            </div>
+          </li>
+
+          <li class="pilar">
+            <div class="pilar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 6l6 12 13 2-9.5 9 2 13L24 36l-11.5 6 2-13L5 20l13-2z"/></svg>
+            </div>
+            <div class="pilar-text">
+              <h3>Doações personalizadas</h3>
+              <p>Nem toda necessidade é igual. Recebemos pedidos específicos — remédios, materiais escolares, equipamentos de trabalho — e conectamos diretamente a doadores.</p>
+            </div>
+          </li>
+
+          <li class="pilar">
+            <div class="pilar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="7"/><path d="M10 40c0-9 6-15 14-15s14 6 14 15"/></svg>
+            </div>
+            <div class="pilar-text">
+              <h3>Empregabilidade</h3>
+              <p>Cursos de capacitação, apoio na produção de currículo, entrevistas simuladas e parcerias com empresas para reinserir pessoas no mercado de trabalho.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMO DOAR -->
+    <section class="como-doar" id="como-doar">
+      <div class="wrap doar-grid">
+        <div class="doar-intro">
+          <h2>Formas de contribuir</h2>
+          <p class="section-lead">Escolha como quer ajudar. Toda contribuição chega a alguém que está contando com ela.</p>
+        </div>
+
+        <div class="doar-opcoes">
+          <article class="doar-card">
+            <h3>Doação em dinheiro</h3>
+            <p>Sustenta a operação e permite comprar exatamente o que falta no momento.</p>
+            <p class="doar-detalhe">
+              Chave Pix: <strong id="pixKey">doe@recomeco.org.br</strong>
+              <button class="copy-btn" type="button" data-copy-target="pixKey">Copiar</button>
+            </p>
+            <a class="btn btn-primary" href="#contato">Quero doar em dinheiro</a>
+          </article>
+
+          <article class="doar-card">
+            <h3>Agasalhos e cobertores</h3>
+            <p>Peças limpas e em bom estado, para qualquer idade.</p>
+            <p class="doar-detalhe">Pontos de coleta em 4 unidades — endereços na página de contato.</p>
+            <a class="btn btn-ghost" href="#contato">Ver pontos de coleta</a>
+          </article>
+
+          <article class="doar-card">
+            <h3>Cesta básica</h3>
+            <p>Adote uma cesta mensal para uma família ou contribua com itens avulsos.</p>
+            <p class="doar-detalhe">Lista de itens prioritários atualizada toda semana.</p>
+            <a class="btn btn-ghost" href="#contato">Ver lista de itens</a>
+          </article>
+
+          <article class="doar-card">
+            <h3>Doação personalizada</h3>
+            <p>Atende a um pedido específico de uma pessoa ou família acompanhada por nós.</p>
+            <p class="doar-detalhe">Fale com a nossa equipe para saber quem precisa agora.</p>
+            <a class="btn btn-ghost" href="#contato">Falar com a equipe</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECISO DE AJUDA -->
+    <section class="ajuda" id="preciso-de-ajuda">
+      <div class="wrap ajuda-inner">
+        <h2>Precisa de ajuda?</h2>
+        <p>
+          Se você ou alguém que você conhece está enfrentando o frio, a fome ou dificuldade para conseguir
+          trabalho, procure uma de nossas unidades ou entre em contato. O atendimento é gratuito e confidencial.
+        </p>
+        <a class="btn btn-primary btn-lg" href="#contato">Buscar atendimento</a>
+      </div>
+    </section>
+
+    <!-- HISTÓRIAS -->
+    <section class="historias" id="historias">
+      <div class="wrap">
+        <h2>Histórias que continuam</h2>
+        <blockquote class="depoimento">
+          <p>"Depois de seis meses sem trabalho fixo, o curso de capacitação me deu de volta a confiança para
+          entrar numa entrevista. Hoje trabalho com carteira assinada e ajudo quem está começando o caminho
+          que eu comecei ali."</p>
+          <footer>— Relato de uma pessoa atendida pelo programa de empregabilidade</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+      <div class="wrap cta-final-inner">
+        <h2>Sua contribuição muda uma história hoje.</h2>
+        <p>Frio, fome e desemprego não esperam. Nós também não.</p>
+        <a class="btn btn-primary btn-lg" href="#como-doar">Quero ajudar agora</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="wrap footer-grid">
+      <div class="footer-col footer-brand">
+        <a class="logo" href="#topo">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Recomeço
+        </a>
+        <p>Instituto Recomeço — organização sem fins lucrativos dedicada a restituir dignidade e oportunidade a pessoas em vulnerabilidade social.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <p>Rua da Esperança, 245 — Centro<br>São Paulo — SP</p>
+        <p><a href="mailto:contato@recomeco.org.br">contato@recomeco.org.br</a></p>
+        <p><a href="tel:+551140028922">(11) 4002-8922</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <p><a href="quem-somos.html">Quem somos</a></p>
+        <p><a href="#missao">Nossa missão</a></p>
+        <p><a href="#como-ajudamos">Como atuamos</a></p>
+        <p><a href="#como-doar">Formas de doar</a></p>
+        <p>CNPJ: 00.000.000/0001-00</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Receba novidades</h4>
+        <p>Um e-mail por mês com histórias reais e o impacto das doações.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <label class="visually-hidden" for="newsletter-email">Seu e-mail</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="seu@email.com" required>
+          <button type="submit" class="btn btn-primary">Assinar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <p>© <span id="anoAtual"></span> Instituto Recomeço. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" type="button">↑</button>
+
+</body>
+</html>
