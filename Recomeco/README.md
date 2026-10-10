@@ -1,4 +1,4 @@
- Recomeço — Projeto ONG
+Recomeço — Projeto ONG
 
 📌 Sobre o projeto
 
